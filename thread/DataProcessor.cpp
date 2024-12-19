@@ -1,6 +1,6 @@
 #include "DataProcessor.h"
 
-DataProcessor::DataProcessor(std::vector<int>& tablica, int start, int end): _tablica(tablica), _start(start), _end(end)
+DataProcessor::DataProcessor(const std::vector<int>& tablica, int start, int end): _tablica(tablica), _start(start), _end(end)
 {
 	sum = 0;
 }
@@ -13,7 +13,7 @@ void DataProcessor::process()
 	}
 }
 
-int DataProcessor::getResult()
+int DataProcessor::getResult() const
 {
 	return sum;
 }
